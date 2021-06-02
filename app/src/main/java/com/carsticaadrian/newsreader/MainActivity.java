@@ -1,10 +1,10 @@
-package com.CarsticaAdrian.newsreader;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.carsticaadrian.newsreader;
 
 import android.os.Bundle;
 
-import com.CarsticaAdrian.newsreader.ui.main.MainFragment;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.carsticaadrian.newsreader.ui.main.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, new NewsListFragment())
                     .commitNow();
         }
     }
