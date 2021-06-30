@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.carsticaadrian.newsreader.NewsListViewModel" />
+            type="com.carsticaadrian.newsreader.model.NewsListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

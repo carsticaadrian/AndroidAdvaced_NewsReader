@@ -1,4 +1,4 @@
-package com.carsticaadrian.newsreader.ui.main;
+package com.carsticaadrian.newsreader.ui.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,10 +8,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
-import com.carsticaadrian.newsreader.NewsListViewModel;
 import com.carsticaadrian.newsreader.databinding.NewsListFragmentBinding;
+import com.carsticaadrian.newsreader.model.NewsListViewModel;
+import com.carsticaadrian.newsreader.model.ViewModelFactory;
 
 public class NewsListFragment extends Fragment {
 
@@ -22,7 +23,8 @@ public class NewsListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mViewModel = new ViewModelProvider(this).get(NewsListViewModel.class);
+        ViewModelFactory factory = new ViewModelFactory();
+        mViewModel = ViewModelProviders.of(requireActivity(), factory).get(NewsListViewModel.class);
         getLifecycle().addObserver(mViewModel);
 
     }
