@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.carsticaadrian.newsreader.ui.Fragments.NewsListFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class NewsReaderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,7 +15,7 @@ public class NewsRepositoryImpl implements NewsRepository {
 
     private final NewsRemoteSource remoteSource;
 
-    private NewsLocalSource localSource;
+    private final NewsLocalSource localSource;
 
     public NewsRepositoryImpl(NewsRemoteSource remoteSource, NewsLocalSource localSource) {
         this.remoteSource = remoteSource;
